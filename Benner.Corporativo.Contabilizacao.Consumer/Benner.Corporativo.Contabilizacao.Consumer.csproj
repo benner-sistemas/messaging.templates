@@ -9,11 +9,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Benner.Consumer.Core">
+      <HintPath>..\packages\Benner.Consumer.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Benner.Listener">
       <HintPath>..\packages\Benner.Listener.dll</HintPath>
     </Reference>
     <Reference Include="Benner.Messaging">
       <HintPath>..\packages\Benner.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Benner.Messaging.CLI">
+      <HintPath>..\packages\Benner.Messaging.CLI.dll</HintPath>
     </Reference>
   </ItemGroup>
 

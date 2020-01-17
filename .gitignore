@@ -3,3 +3,17 @@
 ################################################################################
 
 /Benner.Corporativo.Contabilizacao.Consumer/bin/Debug/netcoreapp2.2
+/.vs/Benner.Corporativo.Contabilizacao/v15
+/Benner.Corporativo.Contabilizacao.Consumer/obj
+/Benner.Corporativo.Contabilizacao.Integration.Tests/bin/Debug/netcoreapp2.2
+/Benner.Corporativo.Contabilizacao.Integration.Tests/obj
+/Benner.Corporativo.Contabilizacao.Models/bin/Debug/netcoreapp2.2
+/Benner.Corporativo.Contabilizacao.Models/obj
+/Benner.Corporativo.Contabilizacao.Producer/obj
+/Benner.Corporativo.Contabilizacao.Producer/bin/Debug/netcoreapp2.2
+/Benner.Corporativo.Contabilizacao.Tests/obj
+/Benner.Corporativo.Contabilizacao.Tests/bin/Debug/netcoreapp2.2
+/packages/Benner.Messaging.pdb
+/packages/Benner.Messaging.dll
+/packages/Benner.Listener.pdb
+/packages/Benner.Listener.dll

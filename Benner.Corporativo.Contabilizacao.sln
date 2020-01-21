@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benner.Corporativo.Contabilizacao.Consumer", "Benner.Corporativo.Contabilizacao.Consumer\Benner.Corporativo.Contabilizacao.Consumer.csproj", "{F7AC9FE0-6398-49A8-A292-68AAB70FD4D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Corporativo.Contabilizacao.Models", "Benner.Corporativo.Contabilizacao.Models\Benner.Corporativo.Contabilizacao.Models.csproj", "{78AF52D1-BEFC-4649-A7F2-957718DE1605}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benner.Corporativo.Contabilizacao.Models", "Benner.Corporativo.Contabilizacao.Models\Benner.Corporativo.Contabilizacao.Models.csproj", "{78AF52D1-BEFC-4649-A7F2-957718DE1605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Corporativo.Contabilizacao.Tests", "Benner.Corporativo.Contabilizacao.Tests\Benner.Corporativo.Contabilizacao.Tests.csproj", "{1322C261-C199-4BD2-8B72-F43EC92C1A4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benner.Corporativo.Contabilizacao.Tests", "Benner.Corporativo.Contabilizacao.Tests\Benner.Corporativo.Contabilizacao.Tests.csproj", "{1322C261-C199-4BD2-8B72-F43EC92C1A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Corporativo.Contabilizacao.Integration.Tests", "Benner.Corporativo.Contabilizacao.Integration.Tests\Benner.Corporativo.Contabilizacao.Integration.Tests.csproj", "{1897E70F-9D15-4791-AE39-F90AA153680C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benner.Corporativo.Contabilizacao.Integration.Tests", "Benner.Corporativo.Contabilizacao.Integration.Tests\Benner.Corporativo.Contabilizacao.Integration.Tests.csproj", "{1897E70F-9D15-4791-AE39-F90AA153680C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benner.Corporativo.Contabilizacao.Producer", "Benner.Corporativo.Contabilizacao.Producer\Benner.Corporativo.Contabilizacao.Producer.csproj", "{15BA0DCB-A65D-4406-B14E-E36A40FDA722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benner.Corporativo.Contabilizacao.Producer", "Benner.Corporativo.Contabilizacao.Producer\Benner.Corporativo.Contabilizacao.Producer.csproj", "{15BA0DCB-A65D-4406-B14E-E36A40FDA722}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0AD1F55-E39A-4EB1-B76F-C76BE79EF873}"
 	ProjectSection(SolutionItems) = preProject

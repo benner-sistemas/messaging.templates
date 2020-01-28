@@ -15,7 +15,7 @@ namespace Benner.Corporativo.Contabilizacao.Producer.Controller
         [HttpPost]
         public ActionResult<IEnterpriseIntegrationResponse> Post([FromBody] ContabilizacaoRequest request)
         {
-            return base.Enqueue(request as IEnterpriseIntegrationResquest);
+            return base.Enqueue(request as IEnterpriseIntegrationRequest);
         }
     }
 }

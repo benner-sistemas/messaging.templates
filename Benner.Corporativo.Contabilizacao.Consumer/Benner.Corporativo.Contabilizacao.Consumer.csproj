@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Benner.Consumer.Core" Version="1.2.0" />
+    <PackageReference Include="Benner.Listener" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Benner.Corporativo.Contabilizacao.Models\Benner.Corporativo.Contabilizacao.Models.csproj" />
   </ItemGroup>
 
@@ -21,9 +26,6 @@
     </Reference>
     <Reference Include="Benner.Messaging">
       <HintPath>..\packages\Benner.Messaging.dll</HintPath>
-    </Reference>
-    <Reference Include="Benner.Messaging.CLI">
-      <HintPath>..\packages\Benner.Messaging.CLI.dll</HintPath>
     </Reference>
   </ItemGroup>
 

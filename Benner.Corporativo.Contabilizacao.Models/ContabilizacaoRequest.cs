@@ -3,7 +3,7 @@ using System;
 
 namespace Benner.Corporativo.Contabilizacao.Models
 {
-    public class ContabilizacaoRequest : IEnterpriseIntegrationResquest
+    public class ContabilizacaoRequest : IEnterpriseIntegrationRequest
     {
         public Guid? RequestID { get; set; }
 

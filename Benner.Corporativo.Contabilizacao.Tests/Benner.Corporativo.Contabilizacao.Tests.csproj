@@ -18,10 +18,10 @@
 
   <ItemGroup>
     <Reference Include="Benner.Listener">
-      <HintPath>..\packages\Benner.Listener.dll</HintPath>
+      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Listener.dll</HintPath>
     </Reference>
     <Reference Include="Benner.Messaging">
-      <HintPath>..\packages\Benner.Messaging.dll</HintPath>
+      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Messaging.dll</HintPath>
     </Reference>
   </ItemGroup>
 

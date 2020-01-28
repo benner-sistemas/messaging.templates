@@ -5,12 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Benner.Messaging" Version="1.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Benner.Messaging">
-      <HintPath>..\packages\Benner.Messaging.dll</HintPath>
+      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Messaging.dll</HintPath>
     </Reference>
   </ItemGroup>
 

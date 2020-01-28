@@ -5,28 +5,36 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\bin-consumer\</OutputPath>
+    <OutputPath>..\bin-consumer</OutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Benner.Consumer.Core" Version="1.2.0" />
-    <PackageReference Include="Benner.Listener" Version="1.2.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Benner.Corporativo.Contabilizacao.Models\Benner.Corporativo.Contabilizacao.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Benner.Consumer.Core">
-      <HintPath>..\packages\Benner.Consumer.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Benner.Listener">
-      <HintPath>..\packages\Benner.Listener.dll</HintPath>
+      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Listener.dll</HintPath>
     </Reference>
     <Reference Include="Benner.Messaging">
-      <HintPath>..\packages\Benner.Messaging.dll</HintPath>
+      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Messaging.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="consumer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="elasticsearch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="messaging.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -6,11 +6,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>C:\Benner\messaging.templates\bin-producer\</OutputPath>
+    <OutputPath>..\bin-producer\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Benner.Messaging.Core" Version="1.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
@@ -22,10 +21,10 @@
 
   <ItemGroup>
     <Reference Include="Benner.Messaging">
-      <HintPath>..\packages\Benner.Messaging.dll</HintPath>
+      <HintPath>..\bin-producer\netcoreapp2.2\Benner.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="Benner.Messaging.Core">
-      <HintPath>..\packages\Benner.Messaging.Core.dll</HintPath>
+      <HintPath>..\bin-producer\netcoreapp2.2\Benner.Messaging.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

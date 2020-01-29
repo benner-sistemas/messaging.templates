@@ -18,18 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		documentacao.md = documentacao.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{8A923934-C27C-4B27-93D7-45CB551CEDB3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "producer", "producer", "{0EB7EDDE-9006-4098-B5D8-943F632371EE}"
-	ProjectSection(SolutionItems) = preProject
-		docker\producer\dockerfile = docker\producer\dockerfile
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "consumer", "consumer", "{869F640A-62E8-4881-8BD8-3CB9E863F8E1}"
-	ProjectSection(SolutionItems) = preProject
-		docker\consumer\dockerfile = docker\consumer\dockerfile
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,10 +47,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0EB7EDDE-9006-4098-B5D8-943F632371EE} = {8A923934-C27C-4B27-93D7-45CB551CEDB3}
-		{869F640A-62E8-4881-8BD8-3CB9E863F8E1} = {8A923934-C27C-4B27-93D7-45CB551CEDB3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C273E9F8-B2C1-473B-83FE-53674562D532}

@@ -1,4 +1,0 @@
-FROM bennersistemas/consumer:1.0
-WORKDIR /app
-COPY . /app
-ENTRYPOINT ["dotnet", "Benner.Consumer.Core.dll"]

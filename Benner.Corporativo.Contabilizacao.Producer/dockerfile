@@ -1,0 +1,2 @@
+FROM bennersistemas/producer:1.0
+COPY . /app

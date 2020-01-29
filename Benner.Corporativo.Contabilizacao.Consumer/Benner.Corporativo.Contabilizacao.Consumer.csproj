@@ -29,6 +29,9 @@
     <None Update="consumer.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="elasticsearch.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

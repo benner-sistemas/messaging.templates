@@ -18,5 +18,7 @@ namespace Benner.Corporativo.Contabilizacao.Models
         public int TipoRegistro { get; set; }
 
         public decimal Valor { get; set; }
+
+        public string Tag { get; set; }
     }
 }

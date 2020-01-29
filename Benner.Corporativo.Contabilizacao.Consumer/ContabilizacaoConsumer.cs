@@ -9,7 +9,7 @@ namespace Benner.Corporativo.Contabilizacao.Consumer
         public override IEnterpriseIntegrationSettings Settings => new EnterpriseIntegrationSettings()
         {
             QueueName = "fila-contabilizacao",
-            RetryIntervalInMilliseconds = 1000,
+            RetryIntervalInMilliseconds = 5000,
             RetryLimit = 4,
         };
 
@@ -19,8 +19,7 @@ namespace Benner.Corporativo.Contabilizacao.Consumer
             if (request == null)
                 throw new ArgumentNullException($"Request não é '{nameof(ContabilizacaoRequest)}'");
 
-            // fazer algo com a request
-            LogInformation("ContabilizacaoConsumer.OnDeadMessage {requestId}:", request.RequestID);
+            //LogInformation("Executando regra de negócio de mensagem morta da contabilização. Requisição {request}", request.RequestID);
         }
 
         public override void OnInvalidMessage(string message, InvalidMessageException exception)
@@ -29,41 +28,22 @@ namespace Benner.Corporativo.Contabilizacao.Consumer
             if (request == null)
                 throw new ArgumentNullException($"Request não é '{nameof(ContabilizacaoRequest)}'");
 
-           //LogInformation("PessoaConsumer.OnInvalidMessage {requestId}:", request.RequestID);
+
+            //LogInformation("Executando regra de negócio de mensagem inválida da contabilização. Requisição {request}", request.RequestID);
         }
 
         public override void OnMessage(string message)
         {
-            var txtMsgInvalida = "mensagem-invalida";
             var request = DeserializeMessage<ContabilizacaoRequest>(message);
-            try
-            {
-                if (message == txtMsgInvalida)
-                    throw new InvalidMessageException("Texto inválido!");
 
-                if (request == null)
-                    throw new ArgumentNullException($"Request não é '{nameof(request)}'");
+            if (request.Tag == "erro-msg-invalida")
+                throw new InvalidMessageException("A mensagem está inválida e precisa ser ajustada na origem");
 
-                if (request.DataEmissao == null)
-                    throw new InvalidMessageException("Data de Emissão deve ser informada!");
+            if (request.Tag == "erro-aleatorio-de-infra")
+                throw new System.IO.FileNotFoundException("Arquivo aleatório não está disponível");
 
-                if(request.DataEntrada == null)
-                    throw new InvalidMessageException("Data de Entrada deve ser informada!");
-
-                if (request.IDEmpresa == null)
-                    throw new InvalidMessageException("Empresa deve ser inforada!");
-
-                if (request.IDFilial == null)
-                    throw new InvalidMessageException("Filial deve ser informada!");
-
-                //LogInformation("ContabilizacaoConsumer.OnMessage {requestId}:", request.RequestID);
-
-            }
-            catch (Exception e)
-            {
-                LogError(e, "Erro OnMessage: {requestId}:", request?.RequestID);
-                throw;
-            }
+            if (request.Tag == "sucesso")
+                LogInformation("A contabilização da requisição {request} foi processada com estrondoso sucesso", request.RequestID);
         }
     }
 }

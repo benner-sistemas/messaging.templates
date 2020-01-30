@@ -7,31 +7,41 @@ namespace Sistema.Origem
 {
     class Program
     {
-        private readonly HttpClient client = new HttpClient();
+        private static HttpClient _client = new HttpClient();
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            var random = new Random();
 
-
-            var request = new
+            try
             {
-                Url = "/api/contabilizacao",
-                Body = new
+                for (int index = 0; index < 1; ++index)
                 {
-                    RequestID = Guid.NewGuid(),
-                    IDEmpresa = 0,
-                    IDFilial = 0,
-                    DataEmissao = new DateTime(1983, 3, 30),
-                    DataEntrada = new DateTime(1983, 3, 30),
-                    TipoRegistro = 0,
-                    Tag = "sucesso"
-                    //Tag = "erro-aleatorio-de-infra"
-                    //Tag = "erro-msg-invalida"
-                },
-            };
+                    var request = new
+                    {
+                        Url = "http://bnu-joao:5004/api/contabilizacao",
+                        Body = new
+                        {
+                            RequestID = Guid.NewGuid(),
+                            IDEmpresa = $"{random.Next(0, 10_000)}-msg_index:{index}",
+                            IDFilial = random.Next(0, 10_000),
+                            DataEmissao = new DateTime(1980, 1, 1).AddDays(random.Next(0, 11_000)),
+                            DataEntrada = new DateTime(1980, 1, 1).AddDays(random.Next(0, 11_000)),
+                            TipoRegistro = random.Next(0, 10_000),
+                            //Tag = "sucesso"
+                            //Tag = "erro-aleatorio-de-infra"
+                            Tag = "erro-msg-invalida"
+                        },
+                    };
+                    var httpResponse = _client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body)).Result;
 
-            //var httpResponse = client.PostAsync(request.Url, ContentHelper.GetStringContent(request.Body));
-
+                    Console.WriteLine($"Mensagem {request.Body.RequestID} índice {index} enviada com sucesso");
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
         }
     }
 

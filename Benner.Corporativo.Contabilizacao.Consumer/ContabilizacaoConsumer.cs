@@ -9,7 +9,7 @@ namespace Benner.Corporativo.Contabilizacao.Consumer
         public override IEnterpriseIntegrationSettings Settings => new EnterpriseIntegrationSettings()
         {
             QueueName = "fila-contabilizacao",
-            RetryIntervalInMilliseconds = 5000,
+            RetryIntervalInMilliseconds = 10_000,
             RetryLimit = 4,
         };
 
@@ -17,24 +17,26 @@ namespace Benner.Corporativo.Contabilizacao.Consumer
         {
             var request = DeserializeMessage<ContabilizacaoRequest>(message);
             if (request == null)
-                throw new ArgumentNullException($"Request não é '{nameof(ContabilizacaoRequest)}'");
+                throw new ArgumentException($"Request não é '{nameof(ContabilizacaoRequest)}'", nameof(message));
 
-            //LogInformation("Executando regra de negócio de mensagem morta da contabilização. Requisição {request}", request.RequestID);
+            //LogInformation("************************************** Executando regra de negócio de mensagem morta da contabilização. Requisição {request}", request.RequestID);
         }
 
         public override void OnInvalidMessage(string message, InvalidMessageException exception)
         {
             var request = DeserializeMessage<ContabilizacaoRequest>(message);
             if (request == null)
-                throw new ArgumentNullException($"Request não é '{nameof(ContabilizacaoRequest)}'");
+                throw new ArgumentException($"Request não é '{nameof(ContabilizacaoRequest)}'", nameof(message));
 
 
-            //LogInformation("Executando regra de negócio de mensagem inválida da contabilização. Requisição {request}", request.RequestID);
+            //LogInformation("************************************** Executando regra de negócio de mensagem inválida da contabilização. Requisição {request}", request.RequestID);
         }
 
         public override void OnMessage(string message)
         {
             var request = DeserializeMessage<ContabilizacaoRequest>(message);
+
+            //LogInformation("************************************** Chamou o OnMessage:{id}", request.RequestID);
 
             if (request.Tag == "erro-msg-invalida")
                 throw new InvalidMessageException("A mensagem está inválida e precisa ser ajustada na origem");
@@ -43,7 +45,7 @@ namespace Benner.Corporativo.Contabilizacao.Consumer
                 throw new System.IO.FileNotFoundException("Arquivo aleatório não está disponível");
 
             if (request.Tag == "sucesso")
-                LogInformation("A contabilização da requisição {request} foi processada com estrondoso sucesso", request.RequestID);
+                LogInformation("************************************** A contabilização da requisição {request} foi processada com estrondoso sucesso", request.RequestID);
         }
     }
 }

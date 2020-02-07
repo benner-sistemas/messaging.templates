@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Benner.Corporativo.Contabilizacao.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest">
+            <summary>
+            Representa uma requisição de documento financeiro para contabilizar, no módulo tal
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.RequestID">
+            <summary>
+            Identificador único da requisição
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.IDEmpresa">
+            <summary>
+            Identificador da empresa
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.IDFilial">
+            <summary>
+            Identificador da filial
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.DataEmissao">
+            <summary>
+            Data de emissão da ocorrência
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.DataEntrada">
+            <summary>
+            Data de entrada
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.TipoRegistro">
+            <summary>
+            Tipo de registro que influencia no comportamento xpto, onde o valor 1 faz isso e o valor 2 faz aquilo
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.Valor">
+            <summary>
+            Valor da ocorrência
+            </summary>
+        </member>
+        <member name="P:Benner.Corporativo.Contabilizacao.Models.ContabilizacaoRequest.Tag">
+            <summary>
+            Propriedade que indica isso, isso e aquilo
+            </summary>
+        </member>
+    </members>
+</doc>

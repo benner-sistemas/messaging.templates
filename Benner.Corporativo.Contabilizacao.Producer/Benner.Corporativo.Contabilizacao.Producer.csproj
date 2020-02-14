@@ -35,11 +35,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Benner.Enterprise.Integration.Messaging">
+      <HintPath>..\bin-producer\netcoreapp2.2\Benner.Enterprise.Integration.Messaging.dll</HintPath>
+    </Reference>
     <Reference Include="Benner.Messaging">
       <HintPath>..\bin-producer\netcoreapp2.2\Benner.Messaging.dll</HintPath>
-    </Reference>
-    <Reference Include="Benner.Messaging.Core">
-      <HintPath>..\bin-producer\netcoreapp2.2\Benner.Messaging.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

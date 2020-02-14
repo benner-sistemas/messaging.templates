@@ -1,6 +1,6 @@
 ﻿using Benner.Corporativo.Contabilizacao.Models;
+using Benner.Enterprise.Integration.Messaging;
 using Benner.Messaging;
-using Benner.Messaging.Core;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Benner.Corporativo.Contabilizacao.Producer.Controller

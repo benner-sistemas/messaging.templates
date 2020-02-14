@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Benner.Listener">
-      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Listener.dll</HintPath>
+    <Reference Include="Benner.Enterprise.Integration.Messaging">
+      <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Enterprise.Integration.Messaging.dll</HintPath>
     </Reference>
     <Reference Include="Benner.Messaging">
       <HintPath>..\bin-consumer\netcoreapp2.2\Benner.Messaging.dll</HintPath>

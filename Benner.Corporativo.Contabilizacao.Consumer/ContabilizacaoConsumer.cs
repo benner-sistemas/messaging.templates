@@ -1,5 +1,5 @@
 ﻿using Benner.Corporativo.Contabilizacao.Models;
-using Benner.Listener;
+using Benner.Enterprise.Integration.Messaging;
 using System;
 
 namespace Benner.Corporativo.Contabilizacao.Consumer
